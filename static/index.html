@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tiny YOLO Video</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="page-header" class="text-center">
+        <h1>YOLO Frames Video</h1>
+    </div>
+
+    <div class="container video-container">
+        <div class="row">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+                <div class="progress hide" id="prepare-bar">
+                    <div class="progress-bar progress-bar-striped" role="progressbar" style="width:0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"><span id="loading-span"></span></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+            </div>
+            <div class="col-4">
+                <input id="video-selector" class="form-control border-0" type="file" accept="video/*">
+            </div>
+            <div class="col-1.8">
+                <button id="prepare-button" class="btn btn-primary resize-btn" type="button" disabled>
+                    <span id="prepare-spinner" class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Prepare Video
+                </button>               
+            </div>
+            <div class="col-2">
+                <button id="play-button" class="btn btn-success resize-btn" type="button" disabled>
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Play
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+    <script src = "https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.0"></script>
+	<script type = "module" src="index.js"></script>
+</body>
+
+</html>
