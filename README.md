@@ -13,6 +13,10 @@ node server.js
 ```
 2. Upload a video.
 
-3. Click the 'Prepare Video' button to extract the frames and predict on them.
+3. Click the 'Prepare Video' button to extract the frames and predict on them. This will take a while.
+
+<p align="center">
+<img src="yolo-browser.png" width="500">
+</p>
 
 4. Click the 'Play' button to play the processed frames.
